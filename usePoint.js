@@ -1,27 +1,21 @@
 const usePoints = (listArray) => {
-    const setPoints = (x,y) => {
-        if(!parseInt(x) || !parseInt(y)){
-            console.error('Point not valid')
-            return ;
-        }
-        const point = {
-            x, 
-            y
-        }
-        listArray.push(point)  
-    } 
-
-    const points = () => {
-        return listArray
+  const setPoints = (x, y) => {
+    if (!parseInt(x) || !parseInt(y) || x<=0 || y<=0) {
+      console.error("La coordenada debe ser mayor a cero");
+      return;
     }
-    
-    
-return [
-        points,
-        setPoints
-    ]
-    
-}
+    let point = {
+      x,
+      y,
+    };
+    listArray.push(point);
+  };
 
+  const points = () => {
+    return listArray;
+  };
 
-module.exports= usePoints;
+  return [points, setPoints];
+};
+
+module.exports = usePoints;
