@@ -4,9 +4,7 @@ const countRec = require ('./countRectangles');
 const [points, setPoints] = usePoints([])
 
 
-const Main = _ =>{
-    const arrayResult=[];
-    
+const Main = _ =>{    
     setPoints(2,2);
     setPoints(2,4);
     setPoints(7,2);
